@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <div id="chessboard"></div>
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <script>
+     
+function createChessboard() {
+  
+  const chessboard = document.getElementById('chessboard');
+
+  
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+      
+      const square = document.createElement('div');
+
+      
+      square.className = 'square';
+
+      
+      if ((row + col) % 2 === 0) {
+        square.classList.add('light');
+      } else {
+        square.classList.add('dark');
+      }
+
+      
+      chessboard.appendChild(square);
+    }
+  }
+}
+createChessboard();
+
+    </script>
+
+  
+</body>
+
+</html>
